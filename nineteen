@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+main(){
+    string s;
+    cin>>s;
+    map<char,int> m;
+    //nineteenineteenineteenineteen 9
+    for(int i=0;i<s.length();i++){
+        m[s[i]]++;
+    }
+    int a[4];
+    a[0]=m['n']/3;
+    a[1]=m['i'];
+    a[2]=m['e']/3;
+    a[3]=m['t'];
+    int o=min(a[1],min(a[2],a[3]));
+    int p=(m['n']-1)/2;
+    cout<<min(o,p);
+    return 0;
+}
